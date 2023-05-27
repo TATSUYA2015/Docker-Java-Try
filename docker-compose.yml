@@ -7,3 +7,4 @@ services:
     tty: true
     volumes:
       - ./server/src:/usr/src:cached
+      
