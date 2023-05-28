@@ -1,10 +1,21 @@
 version: '3.6'
 services:
+  #
   java:
     build: ./docker/java
+    container_name: java
     ports:
-      - 8080:8080
+      - "8080:8080"
     tty: true
     volumes:
       - ./server/src:/usr/src:cached
-      
+
+  #dbサービス名（sql）    
+  db: 
+    image: mysql:8.0
+    container_name: mysql
+    volumes:
+      - ./mysql/db:/var/lib/mysql  #実データ永続化
+      - ./mysql/log:/var/log/mysql #log永続化
+    ports:
+      -"3306:3306"
