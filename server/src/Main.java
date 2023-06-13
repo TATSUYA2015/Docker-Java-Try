@@ -14,7 +14,7 @@ public class Staffinfo {
 
     public static void name(String[] args) {
         Staff yamada = new staff();
-        yamada.name = "Taro Yamada"
+        yamada.name = "Tastuya Wakatsuki"
 
         System.out.println(yamada.name);
     }
